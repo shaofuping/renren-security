@@ -60,10 +60,10 @@ renren-security
 <br>
 
  **技术选型：** 
-- 核心框架：Spring Boot 2.0
+- 核心框架：Spring Boot 2.1
 - 安全框架：Apache Shiro 1.4
 - 视图框架：Spring MVC 5.0
-- 持久层框架：MyBatis 3.3
+- 持久层框架：MyBatis 3.5
 - 定时器：Quartz 2.3
 - 数据库连接池：Druid 1.1
 - 日志管理：SLF4J 1.7、Log4j
@@ -80,6 +80,7 @@ renren-security
 
  **本地部署**
 - 通过git下载源码
+- idea、eclipse需安装lombok插件，不然会提示找不到entity的get set方法
 - 创建数据库renren_security，数据库编码为UTF-8
 - 执行db/mysql.sql文件，初始化数据【按需导入表结构及数据】
 - 修改application-dev.yml文件，更新MySQL账号和密码
@@ -89,6 +90,7 @@ renren-security
 - Eclipse、IDEA运行AdminApplication.java，则可启动项目【renren-admin】
 - renren-admin访问路径：http://localhost:8080/renren-admin
 - swagger文档路径：http://localhost:8080/renren-admin/swagger/index.html
+- swagger注解路径：http://localhost:8080/renren-admin/swagger-ui.html
 - 账号密码：admin/admin
 
 <br>
@@ -104,10 +106,10 @@ renren-security
 
 <br>
 
- **分布式部署**
-- 分布式部署，需要安装redis，并配置config.properties里的redis信息
+ **集群部署**
+- 集群部署，需要安装redis，并配置redis信息
 - 需要配置【renren.redis.open=true】，表示开启redis缓存
-- 需要配置【renren.shiro.redis=true】，表示把shiro session存到redis里
+- 需要配置【renren.cluster=true】，表示开启集群环境
 
 <br>
 
@@ -118,11 +120,11 @@ renren-security
 <br>
 
 **如何交流、反馈、参与贡献？** 
-- 开发文档：http://www.renren.io/guide/security
-- 官方社区：http://www.renren.io/community
+- 开发文档：https://www.renren.io/guide/security
+- 官方社区：https://www.renren.io/community
 - gitee仓库：https://gitee.com/renrenio/renren-security
 - github仓库：https://github.com/renrenio/renren-security
-- [人人开源](http://www.renren.io)：http://www.renren.io   
+- [人人开源](https://www.renren.io)：https://www.renren.io   
 - 官方QQ群：324780204、145799952
 - 如需关注项目最新动态，请Watch、Star项目，同时也是对项目最好的支持
 - 技术讨论、二次开发等咨询、问题和建议，请移步到官方社区，我会在第一时间进行解答和回复！
